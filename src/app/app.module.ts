@@ -11,10 +11,13 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { OrdersComponent } from './orders/orders.component';
 import { OrderComponent } from './orders/order/order.component';
 import { OrderItemsComponent } from './orders/order-items/order-items.component';
+import {AppRoutingModule} from './app-routing.module';
+import {OrderService} from './orders/shared/order.service';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ BrowserModule, FormsModule,AppRoutingModule ],
   declarations: [ AppComponent, HelloComponent,applyMyStyle, HeroesComponent, HeroDetailComponent, OrdersComponent, OrderComponent, OrderItemsComponent ],
+  providers:[OrderService],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
