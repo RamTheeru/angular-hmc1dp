@@ -1,1 +1,32 @@
-<form #form="ngForm" autocomplete="off"></form>
+<form #form="ngForm" autocomplete="off" *ngIf="ordrServ.ordData">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Order No :</label>
+        <input type="text" class="form-control" name="orderno" #orderno="ngModel" [(ngModel)]="ordrServ.ordData.OrderNo" />
+      </div>
+            <div class="form-group">
+        <label>Customer :</label>
+        <select  class="form-control" name="CustomerID" #CustomerID="ngModel" [(ngModel)]="ordrServ.ordData.CustomerID" >
+          <option value="0">Please select customer</option>
+        </select>
+      </div>
+
+    </div>
+    <div class="col-md-6">
+            <div class="form-group">
+        <label>Payment Method :</label>
+        <select  class="form-control" name="Pmethod" #Pmethod="ngModel" [(ngModel)]="ordrServ.ordData.Pmethod" >
+          <option value="">Please select payment Method</option>
+        </select>
+      </div>
+        <div class="form-group">
+        <label>GTotal :</label>
+        <input type="text" class="form-control" name="GTotal" #GTotal="ngModel" [(ngModel)]="ordrServ.ordData.GTotal" />
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-dark">Submit</button>
+  </div>
+</form>
