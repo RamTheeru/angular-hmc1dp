@@ -3,7 +3,7 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>Order No :</label>
-        <input type="text" class="form-control" name="orderno" #orderno="ngModel" [(ngModel)]="ordrServ.ordData.OrderNo" />
+        <input type="text" class="form-control" name="orderno" #orderno="ngModel" [(ngModel)]="ordrServ.ordData.OrderNo"  readonly/>
       </div>
             <div class="form-group">
         <label>Customer :</label>
@@ -18,11 +18,13 @@
         <label>Payment Method :</label>
         <select  class="form-control" name="Pmethod" #Pmethod="ngModel" [(ngModel)]="ordrServ.ordData.Pmethod" >
           <option value="">Please select payment Method</option>
+          <option value="cash">cash</option>
+            <option value="card">card</option>
         </select>
       </div>
         <div class="form-group">
         <label>GTotal :</label>
-        <input type="text" class="form-control" name="GTotal" #GTotal="ngModel" [(ngModel)]="ordrServ.ordData.GTotal" />
+        <input type="text" class="form-control" name="GTotal" #GTotal="ngModel" [(ngModel)]="ordrServ.ordData.GTotal" readonly/>
       </div>
     </div>
   </div>
