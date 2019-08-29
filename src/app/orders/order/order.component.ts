@@ -17,7 +17,6 @@ export class OrderComponent implements OnInit {
   }
   resetform(form?:NgForm){
     if(form=null)
-    {
     form.resetForm();
     this.ordrServ.ordData={
         OrderID : null,
@@ -26,7 +25,8 @@ export class OrderComponent implements OnInit {
         Pmethod : '',
         GTotal : null
     };
-  }
+  
+  console.log(this.ordrServ.ordData);
   }
 
 }
