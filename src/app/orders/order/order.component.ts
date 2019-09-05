@@ -29,5 +29,7 @@ export class OrderComponent implements OnInit {
   
   console.log(this.ordrServ.ordData);
   }
+addorEditOrdItem(ordItemIndex,orderId){
 
+}
 }
