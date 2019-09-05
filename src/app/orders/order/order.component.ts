@@ -25,6 +25,7 @@ export class OrderComponent implements OnInit {
         Pmethod : '',
         GTotal : null
     };
+    this.ordrServ.ordItems=[];
   
   console.log(this.ordrServ.ordData);
   }
